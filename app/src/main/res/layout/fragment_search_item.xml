@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.SearchView
+        android:id="@+id/search_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:iconifiedByDefault="false"
+        app:background="@null"
+        app:queryHint="@string/search_title" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/books_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:choiceMode="singleChoice"
+        tools:ignore="NestedScrolling"
+        android:padding="4dp" />
+
+    <include layout="@layout/view_progress_bar" />
+    <include layout="@layout/view_lost_connection" />
+</LinearLayout>
