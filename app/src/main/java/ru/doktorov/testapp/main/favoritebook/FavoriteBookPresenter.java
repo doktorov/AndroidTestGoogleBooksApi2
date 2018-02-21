@@ -42,7 +42,7 @@ public final class FavoriteBookPresenter implements FavoriteBookContract.Present
     @Override
     public void load() {
         mCompositeDisposable.add(mTasksRepository.getFavorites()
-                .subscribeOn(Schedulers.computation())
+                .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(favorites -> {
                     if (favorites != null && favorites.size() != 0) {
